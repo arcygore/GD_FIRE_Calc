@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bk8x2akfkaguy"]
+
+[ext_resource type="PackedScene" uid="uid://bexndtcdl4yuq" path="res://net_investments.tscn" id="1_2hew5"]
+[ext_resource type="PackedScene" uid="uid://bd3o3ideudf6n" path="res://fire_age.tscn" id="2_0mlps"]
+
+[node name="MainScreen" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.39189, 0.382293, 0.552713, 1)
+
+[node name="NetInvestments" parent="." instance=ExtResource("1_2hew5")]
+position = Vector2(31, 42)
+
+[node name="FireAge" parent="." instance=ExtResource("2_0mlps")]
+position = Vector2(26, 105)
