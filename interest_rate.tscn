@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ckodixt7b0kh4"]
+
+[node name="InterestRate" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1.0
+offset_top = 9.0
+offset_right = 100.0
+offset_bottom = 58.0
+text = "Expected Interest Rate:"
+
+[node name="Percent" type="Label" parent="."]
+offset_left = 234.0
+offset_top = 10.0
+offset_right = 333.0
+offset_bottom = 59.0
+text = "%"
+
+[node name="InvestmentsInput" type="TextEdit" parent="."]
+offset_left = 184.0
+offset_top = 4.0
+offset_right = 230.0
+offset_bottom = 42.0
+theme_override_colors/background_color = Color(0, 0, 0, 0)
+text = "6.5"
+placeholder_text = "6.5"

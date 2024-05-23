@@ -1,9 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://bk8x2akfkaguy"]
+[gd_scene load_steps=10 format=3 uid="uid://bk8x2akfkaguy"]
 
 [ext_resource type="PackedScene" uid="uid://bexndtcdl4yuq" path="res://net_investments.tscn" id="1_2hew5"]
+[ext_resource type="Script" path="res://main_screen.gd" id="1_qx8oa"]
 [ext_resource type="PackedScene" uid="uid://bd3o3ideudf6n" path="res://fire_age.tscn" id="2_0mlps"]
+[ext_resource type="PackedScene" uid="uid://dkf4tkghr7hls" path="res://current_age.tscn" id="3_swr8g"]
+[ext_resource type="PackedScene" uid="uid://4cga0jxh1cg3" path="res://recurring_investments.tscn" id="4_4lvsc"]
+[ext_resource type="PackedScene" uid="uid://ckodixt7b0kh4" path="res://interest_rate.tscn" id="5_lfg2u"]
+
+[sub_resource type="Theme" id="Theme_tqa1i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lpl1g"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1jh82"]
+font_size = 128
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
 
 [node name="MainScreen" type="CanvasLayer"]
+script = ExtResource("1_qx8oa")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -20,3 +34,22 @@ position = Vector2(31, 42)
 
 [node name="FireAge" parent="." instance=ExtResource("2_0mlps")]
 position = Vector2(26, 105)
+
+[node name="CurrentAge" parent="." instance=ExtResource("3_swr8g")]
+position = Vector2(26, 150)
+
+[node name="RecurringInvestments" parent="." instance=ExtResource("4_4lvsc")]
+position = Vector2(30, 206)
+
+[node name="InterestRate" parent="." instance=ExtResource("5_lfg2u")]
+position = Vector2(27, 279)
+
+[node name="FutureAmount" type="Label" parent="."]
+offset_left = 358.0
+offset_top = 327.0
+offset_right = 929.0
+offset_bottom = 502.0
+theme = SubResource("Theme_tqa1i")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lpl1g")
+text = "AMOUNT"
+label_settings = SubResource("LabelSettings_1jh82")
